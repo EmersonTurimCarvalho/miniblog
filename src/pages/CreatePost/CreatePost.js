@@ -43,18 +43,20 @@ const CreatePost = () => {
       title,
       image,
       body,
-      tagsArray,
+      tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
 
-    if(formError) return
+    if(formError){
+      return
+    } 
 
     insertDocument({
       title,
       image,
       body,
-      tagsArray,
+      tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
